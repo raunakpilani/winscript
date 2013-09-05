@@ -10,3 +10,5 @@ run using
 browser_url.au3 activates (brings to focus) already open IE window and provides the URL as alert then activates Firefox Window and provides URL as alert.
 
 autologon.bat sets the user Browserstack to auto-logon where the user has no password
+
+disable_reg.bat makes registry changes to disable as many desktop features as possible
