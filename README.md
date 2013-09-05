@@ -8,3 +8,5 @@ run using
 >keepalive.bat proc_name.exe
 
 browser_url.au3 activates (brings to focus) already open IE window and provides the URL as alert then activates Firefox Window and provides URL as alert.
+
+autologon.bat sets the user Browserstack to auto-logon where the user has no password
