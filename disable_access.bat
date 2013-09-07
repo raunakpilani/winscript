@@ -261,37 +261,37 @@ REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v Cl
 :: Clear the recent programs list for new users
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v ClearRecentProgForNewUserInStartMenu /t REG_DWORD /d 1 /f
 :: Do not display any custom toolbars in the taskbar
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoToolbarsOnTaskbar /t REG_DWORD /d 0 /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoToolbarsOnTaskbar /t REG_DWORD /d 1 /f
 :: Do not keep history of recently opened documents
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoRecentDocsHistory /t REG_DWORD /d 0 /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoRecentDocsHistory /t REG_DWORD /d 1 /f
 :: Do not search communications
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoSearchCommInStartMenu /t REG_DWORD /d 0 /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoSearchCommInStartMenu /t REG_DWORD /d 1 /f
 :: Do not search for files
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoSearchFilesInStartMenu /t REG_DWORD /d 0 /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoSearchFilesInStartMenu /t REG_DWORD /d 1 /f
 :: Do not search programs and Control Panel items
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoSearchProgramsInStartMenu /t REG_DWORD /d 0 /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoSearchProgramsInStartMenu /t REG_DWORD /d 1 /f
 :: Do not use the search-based method when resolving shell shortcuts
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoResolveSearch /t REG_DWORD /d 0 /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoResolveSearch /t REG_DWORD /d 1 /f
 :: Do not use the tracking-based method when resolving shell shortcuts
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoResolveTrack /t REG_DWORD /d 0 /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoResolveTrack /t REG_DWORD /d 1 /f
 :: Force classic Start Menu
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoSimpleStartMenu /t REG_DWORD /d 0 /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoSimpleStartMenu /t REG_DWORD /d 1 /f
 :: Gray unavailable Windows Installer programs Start Menu shortcuts
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v GreyMSIAds /t REG_DWORD /d 0 /f
 :: Hide the notification area
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoTrayItemsDisplay /t REG_DWORD /d 0 /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoTrayItemsDisplay /t REG_DWORD /d 1 /f
 :: Lock the Taskbar
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v LockTaskbar /t REG_DWORD /d 1 /f
 :: Prevent changes to Taskbar and Start Menu Settings
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoSetTaskbar /t REG_DWORD /d 0 /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoSetTaskbar /t REG_DWORD /d 1 /f
 :: Prevent grouping of taskbar items
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoTaskGrouping /t REG_DWORD /d 0 /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoTaskGrouping /t REG_DWORD /d 1 /f
 :: Remove access to the context menus for the taskbar
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoTrayContextMenu /t REG_DWORD /d 0 /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoTrayContextMenu /t REG_DWORD /d 1 /f
 :: Remove All Programs list from the Start menu
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoStartMenuMorePrograms /t REG_DWORD /d 0 /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoStartMenuMorePrograms /t REG_DWORD /d 1 /f
 :: Remove and prevent access to the Shut Down, Restart, Sleep, and Hibernate commands
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoClose /t REG_DWORD /d 0 /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoClose /t REG_DWORD /d 1 /f
 :: Remove Clock from the system notification area
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v HideClock /t REG_DWORD /d 1 /f
 :: Remove common program groups from Start Menu
@@ -466,7 +466,3 @@ REG ADD "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v HideContentViewMo
 REG ADD "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v DisableIndexedLibraryExperience /t REG_DWORD /d 1 /f
 :: Turn off Windows+X hotkeys
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoWinKeys /t REG_DWORD /d 1 /f
-:: Prevent Start Menu from opening
-REG DELETE "HKLM\SOFTWARE\Classes\CLSID\{a2a9545d-a0c2-42b4-9708-a0b2badd77c8}" /f
-:: Remove Taskband
-REG DELETE "HKLM\SOFTWARE\Classes\*\shellex\ContextMenuHandlers\{90AA3A4E-1CBA-4233-B8BB-535773D48449}" /f
