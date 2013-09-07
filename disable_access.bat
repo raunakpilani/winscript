@@ -275,7 +275,7 @@ REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v No
 :: Do not use the tracking-based method when resolving shell shortcuts
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoResolveTrack /t REG_DWORD /d 1 /f
 :: Force classic Start Menu
-REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoSimpleStartMenu /t REG_DWORD /d 1 /f
+REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoSimpleStartMenu /t REG_DWORD /d 0 /f
 :: Gray unavailable Windows Installer programs Start Menu shortcuts
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v GreyMSIAds /t REG_DWORD /d 0 /f
 :: Hide the notification area
