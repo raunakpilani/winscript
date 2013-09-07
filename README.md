@@ -11,4 +11,4 @@ browser_url.au3 activates (brings to focus) already open IE window and provides 
 
 autologon.bat sets the user Browserstack to auto-logon where the user has no password
 
-disable_reg.bat makes registry changes to disable as many desktop features as possible
+disable_access.bat makes registry changes to disable as many desktop features as possible
