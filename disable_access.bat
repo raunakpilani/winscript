@@ -466,3 +466,5 @@ REG ADD "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v HideContentViewMo
 REG ADD "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v DisableIndexedLibraryExperience /t REG_DWORD /d 1 /f
 :: Turn off Windows+X hotkeys
 REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" /v NoWinKeys /t REG_DWORD /d 1 /f
+:: Remove Taskbar access entirely
+REG DELETE "HKLM\SOFTWARE\Classes\CLSID\{a2a9545d-a0c2-42b4-9708-a0b2badd77c8}" /f
